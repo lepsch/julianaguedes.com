@@ -5,22 +5,43 @@
   /* --theme-color: #FF9999; */
 }
 
-@font-face { font-family: Quicksand; font-weight: normal; src: url('./assets/Quicksand-Regular.ttf'); }
-@font-face { font-family: Quicksand; font-weight: bold; src: url('./assets/Quicksand-Bold.ttf'); }
-@font-face { font-family: Quicksand; font-weight: lighter; src: url('./assets/Quicksand-Light.ttf'); }
+@font-face {
+  font-family: Quicksand;
+  font-weight: normal;
+  src: url("./assets/Quicksand-Regular.ttf");
+}
+@font-face {
+  font-family: Quicksand;
+  font-weight: bold;
+  src: url("./assets/Quicksand-Bold.ttf");
+}
+@font-face {
+  font-family: Quicksand;
+  font-weight: lighter;
+  src: url("./assets/Quicksand-Light.ttf");
+}
 
 body {
   margin: 0;
-  font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    Quicksand,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 * {
@@ -89,7 +110,7 @@ div#tarteaucitronRoot {
     #tarteaucitronClosePanel,
     #tarteaucitronMainLineOffset,
     #tarteaucitronSave,
-    .tarteaucitronTitle button  {
+    .tarteaucitronTitle button {
       background: rgb(53, 58, 63);
     }
 

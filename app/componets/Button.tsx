@@ -1,10 +1,10 @@
-import React from 'react'
-import clsx from 'clsx'
-import styles from './Button.module.scss'
+import React from "react"
+import clsx from "clsx"
+import styles from "./Button.module.scss"
 
 enum ButtonTheme {
-  light = 'light',
-  dark = 'dark',
+  light = "light",
+  dark = "dark",
 }
 
 export const Button = ({
@@ -17,7 +17,7 @@ export const Button = ({
   theme?: ButtonTheme
 }) => {
   return (
-    <a className={clsx(styles['Button'], theme)} href={href}>
+    <a className={clsx(styles["Button"], theme)} href={href}>
       {children}
     </a>
   )
