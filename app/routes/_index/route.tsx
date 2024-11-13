@@ -1,6 +1,6 @@
 import { Page } from '../../componets'
 import { Cover } from './Cover'
-import { Section } from '../Procedures/Section'
+import { Section } from '../tratamentos/Section'
 import { SelfDisplay } from './SelfDisplay'
 import tratamentos from '../../assets/dra-juliana-guedes-tratamentos-collage.jpg'
 import styles from './index.module.scss'
