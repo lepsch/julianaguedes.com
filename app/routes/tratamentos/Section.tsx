@@ -1,4 +1,4 @@
-import classnames from 'classnames'
+import clsx from 'clsx'
 
 import { Button } from '../../componets'
 import styles from './Section.module.scss'
@@ -21,7 +21,7 @@ export function Section({
   text: string
 }) {
   return (
-    <section className={classnames(styles['Section'], { [styles['reverse'] as string]: !!reverse })} id={id} aria-labelledby={`${id}-title`}>
+    <section className={clsx(styles['Section'], { [styles['reverse'] as string]: !!reverse })} id={id} aria-labelledby={`${id}-title`}>
       <div className={styles['info']}>
         <div className={styles['container']}>
           <h2 id={`${id}-title`} className={styles['name']}>{name}</h2>
