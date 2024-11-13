@@ -12,18 +12,18 @@ export const links: LinksFunction = () => [{ rel: "canonical", href: `${BASE_URL
 
 function Home() {
   return (
-    <Page className={styles['Home']} header={<Cover />}>
+    <Page className={styles["Home"]} header={<Cover />}>
       <SelfDisplay />
       <Section
-        alt='Colagem de fotos de tratamentos e Dra. Juliana Guedes'
-        href='/tratamentos'
-        id='tratamentos'
-        name='Tratamentos'
+        alt="Colagem de fotos de tratamentos e Dra. Juliana Guedes"
+        href="/tratamentos"
+        id="tratamentos"
+        name="Tratamentos"
         photo={tratamentos}
         reverse
-        text='Ácido Hialurónico - Toxina Botulínica - Fios de PDO - Bioestimuladores
+        text="Ácido Hialurónico - Toxina Botulínica - Fios de PDO - Bioestimuladores
         de Colagénio - Dieta Cetogênica (PronoKal® / Proteifine®) - Peeling
-        Químico - Microneedling - Consultas Médicas - Mesoterapia'
+        Químico - Microneedling - Consultas Médicas - Mesoterapia"
       />
     </Page>
   )

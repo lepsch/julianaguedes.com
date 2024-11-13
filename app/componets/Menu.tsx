@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router'
-import clsx from 'clsx'
+import { useEffect, useState } from "react"
+import { Link } from "react-router"
+import clsx from "clsx"
 
-import Bars from '../assets/bars-solid.svg'
-import Xmark from '../assets/xmark-solid.svg'
-import styles from './Menu.module.scss'
+import Bars from "../assets/bars-solid.svg"
+import Xmark from "../assets/xmark-solid.svg"
+import styles from "./Menu.module.scss"
 
 export function Menu() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,28 +12,28 @@ export function Menu() {
   useEffect(() => {
     const closeMenu = () => setMenuOpen(false)
 
-    document.addEventListener('click', closeMenu)
+    document.addEventListener("click", closeMenu)
     return () => {
-      document.removeEventListener('click', closeMenu)
+      document.removeEventListener("click", closeMenu)
     }
   })
 
   return (
-    <nav className={styles['Menu']}>
-      <div className={styles['menu-mobile-icon']}>
+    <nav className={styles["Menu"]}>
+      <div className={styles["menu-mobile-icon"]}>
         <div className={clsx({ hidden: menuOpen })}>
           <button
             onClick={(e) => {
               setMenuOpen(true)
               e.stopPropagation()
             }}
-            aria-label='Abrir Menu'
+            aria-label="Abrir Menu"
             aria-hidden={menuOpen}
             aria-haspopup
             aria-expanded={false}
-            aria-controls='menu'
+            aria-controls="menu"
           >
-            <Bars role='none' />
+            <Bars role="none" />
           </button>
         </div>
         <div className={clsx({ hidden: !menuOpen })}>
@@ -42,21 +42,37 @@ export function Menu() {
               setMenuOpen(false)
               e.stopPropagation()
             }}
-            aria-label='Fechar Menu'
+            aria-label="Fechar Menu"
             aria-hidden={!menuOpen}
             aria-haspopup
             aria-expanded={true}
-            aria-controls='menu'
+            aria-controls="menu"
           >
-            <Xmark role='none' />
+            <Xmark role="none" />
           </button>
         </div>
       </div>
-      <ul id='menu' className={clsx(styles['menu-content'], { open: menuOpen })} role='menu'>
-        <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/'>Início</Link></li>
-        <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/tratamentos'>Tratamentos</Link></li>
-        <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/sobre'>Sobre</Link></li>
-        <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/contacto'>Contacto</Link></li>
+      <ul id="menu" className={clsx(styles["menu-content"], { open: menuOpen })} role="menu">
+        <li className={styles["menu-item"]} role="none">
+          <Link role="menuitem" to="/">
+            Início
+          </Link>
+        </li>
+        <li className={styles["menu-item"]} role="none">
+          <Link role="menuitem" to="/tratamentos">
+            Tratamentos
+          </Link>
+        </li>
+        <li className={styles["menu-item"]} role="none">
+          <Link role="menuitem" to="/sobre">
+            Sobre
+          </Link>
+        </li>
+        <li className={styles["menu-item"]} role="none">
+          <Link role="menuitem" to="/contacto">
+            Contacto
+          </Link>
+        </li>
       </ul>
     </nav>
   )

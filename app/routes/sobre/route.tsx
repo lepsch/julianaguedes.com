@@ -10,7 +10,7 @@ export const links: LinksFunction = () => [{ rel: "canonical", href: `${BASE_URL
 
 function About() {
   return (
-    <Page className={styles['About']} header={<Cover />}>
+    <Page className={styles["About"]} header={<Cover />}>
       <Path />
       <WorkPlaces />
     </Page>

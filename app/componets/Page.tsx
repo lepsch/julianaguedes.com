@@ -1,6 +1,6 @@
-import type { PropsWithChildren, ReactNode } from 'react'
-import { Menu } from './Menu'
-import { Footer } from './Footer'
+import type { PropsWithChildren, ReactNode } from "react"
+import { Menu } from "./Menu"
+import { Footer } from "./Footer"
 
 export function Page({
   children,
