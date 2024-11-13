@@ -21,7 +21,6 @@ export default defineConfig(({ command, isSsrBuild }) => ({
     }),
     sitemap({
       hostname: BASE_URL,
-      dynamicRoutes: ["/tratamentos", "/contacto", "/sobre"],
       exclude: ["/securimage/captcha", "/securimage/database", "/tarteaucitronjs"],
       outDir: "build/client",
       robots: [
