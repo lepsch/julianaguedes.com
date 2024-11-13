@@ -1,9 +1,14 @@
-import { Page } from '../../componets'
-import { Cover } from './Cover'
-import { Section } from '../tratamentos/Section'
-import { SelfDisplay } from './SelfDisplay'
-import tratamentos from '../../assets/dra-juliana-guedes-tratamentos-collage.jpg'
-import styles from './index.module.scss'
+import type { LinksFunction } from "react-router"
+import tratamentos from "~/assets/dra-juliana-guedes-tratamentos-collage.jpg"
+import { canonicalPath } from "~/canonical-path"
+import { Page } from "~/componets"
+import { BASE_URL } from "~/constants"
+import { Section } from "../tratamentos/Section"
+import { Cover } from "./Cover"
+import { SelfDisplay } from "./SelfDisplay"
+import styles from "./index.module.scss"
+
+export const links: LinksFunction = () => [{ rel: "canonical", href: `${BASE_URL}${canonicalPath.home}` }]
 
 function Home() {
   return (
