@@ -1,16 +1,21 @@
-import { Page } from '../../componets'
-import { Cover } from './Cover'
-import { Section } from './Section'
-import botox from '../../assets/dra-juliana-guedes-botox.jpg'
-import acidohialuronico from '../../assets/dra-juliana-guedes-acido-hialuronico.jpg'
-import fios from '../../assets/dra-juliana-guedes-fios-de-pdo.jpg'
-import bioestimuladores from '../../assets/dra-juliana-guedes-bioestimuladores-de-colageno.jpg'
-import pronokal from '../../assets/dra-juliana-guedes-pronokal.jpg'
-import peeling from '../../assets/dra-juliana-guedes-peeling-quimico.jpg'
-import microagulhamento from '../../assets/dra-juliana-guedes-dermapen-microagulhamento.jpg'
-import consultas from '../../assets/dra-juliana-guedes-consultas-medicas.jpg'
-import mesoterapia from '../../assets/dra-juliana-guedes-mesoterapia.jpg'
-import styles from './index.module.scss'
+import type { LinksFunction } from "react-router"
+import { BASE_URL } from "~/constants"
+import { Page } from "~/componets"
+import { canonicalPath } from "~/canonical-path"
+import botox from "~/assets/dra-juliana-guedes-botox.jpg"
+import acidohialuronico from "~/assets/dra-juliana-guedes-acido-hialuronico.jpg"
+import fios from "~/assets/dra-juliana-guedes-fios-de-pdo.jpg"
+import bioestimuladores from "~/assets/dra-juliana-guedes-bioestimuladores-de-colageno.jpg"
+import pronokal from "~/assets/dra-juliana-guedes-pronokal.jpg"
+import peeling from "~/assets/dra-juliana-guedes-peeling-quimico.jpg"
+import microagulhamento from "~/assets/dra-juliana-guedes-dermapen-microagulhamento.jpg"
+import consultas from "~/assets/dra-juliana-guedes-consultas-medicas.jpg"
+import mesoterapia from "~/assets/dra-juliana-guedes-mesoterapia.jpg"
+import { Cover } from "./Cover"
+import { Section } from "./Section"
+import styles from "./index.module.scss"
+
+export const links: LinksFunction = () => [{ rel: "canonical", href: `${BASE_URL}${canonicalPath.sobre}` }]
 
 function Procedures() {
   return (
