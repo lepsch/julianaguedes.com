@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import classnames from 'classnames'
+import { Link } from 'react-router'
+import clsx from 'clsx'
 
 import Bars from '../assets/bars-solid.svg'
 import Xmark from '../assets/xmark-solid.svg'
@@ -21,7 +21,7 @@ export function Menu() {
   return (
     <nav className={styles['Menu']}>
       <div className={styles['menu-mobile-icon']}>
-        <div className={classnames({ hidden: menuOpen })}>
+        <div className={clsx({ hidden: menuOpen })}>
           <button
             onClick={(e) => {
               setMenuOpen(true)
@@ -36,7 +36,7 @@ export function Menu() {
             <Bars role='none' />
           </button>
         </div>
-        <div className={classnames({ hidden: !menuOpen })}>
+        <div className={clsx({ hidden: !menuOpen })}>
           <button
             onClick={(e) => {
               setMenuOpen(false)
@@ -52,7 +52,7 @@ export function Menu() {
           </button>
         </div>
       </div>
-      <ul id='menu' className={classnames(styles['menu-content'], { open: menuOpen })} role='menu'>
+      <ul id='menu' className={clsx(styles['menu-content'], { open: menuOpen })} role='menu'>
         <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/'>Início</Link></li>
         <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/tratamentos'>Tratamentos</Link></li>
         <li className={styles['menu-item']} role='none'><Link role='menuitem' to='/sobre'>Sobre</Link></li>

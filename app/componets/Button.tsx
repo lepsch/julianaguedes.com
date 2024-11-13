@@ -1,5 +1,5 @@
 import React from 'react'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import styles from './Button.module.scss'
 
 enum ButtonTheme {
@@ -17,7 +17,7 @@ export const Button = ({
   theme?: ButtonTheme
 }) => {
   return (
-    <a className={classnames(styles['Button'], theme)} href={href}>
+    <a className={clsx(styles['Button'], theme)} href={href}>
       {children}
     </a>
   )
