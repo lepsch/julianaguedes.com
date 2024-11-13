@@ -10,7 +10,9 @@ export function Menu() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const closeMenu = () => setMenuOpen(false)
+    const closeMenu = () => {
+      setMenuOpen(false)
+    }
 
     document.addEventListener("click", closeMenu)
     return () => {

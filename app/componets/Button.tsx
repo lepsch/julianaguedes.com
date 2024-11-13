@@ -1,4 +1,4 @@
-import React from "react"
+import { type ReactNode } from "react"
 import clsx from "clsx"
 import styles from "./Button.module.scss"
 
@@ -12,7 +12,7 @@ export const Button = ({
   href,
   theme = ButtonTheme.light,
 }: {
-  children?: React.ReactNode | undefined
+  children?: ReactNode | undefined
   href: string
   theme?: ButtonTheme
 }) => {
