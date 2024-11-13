@@ -24,8 +24,6 @@
     "@prettier/plugin-xml": "^3.4.1",
     "@react-router/dev": "^7.0.0-pre.5",
     "@total-typescript/ts-reset": "^0.6.1",
-    "@tsconfig/node20": "^20.1.4",
-    "@tsconfig/strictest": "^2.0.5",
     "@types/bun": "^1.1.13",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
