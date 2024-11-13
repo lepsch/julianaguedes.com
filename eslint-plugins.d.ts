@@ -1,23 +1,28 @@
-declare module 'eslint-plugin-react/configs/recommended.js' {
-  import { type Linter } from 'eslint'
-  const config: Linter.FlatConfig
-  export = config
-}
-
-declare module 'eslint-plugin-react/configs/jsx-runtime.js' {
-  import { type Linter } from 'eslint'
-  const config: Linter.FlatConfig
-  export = config
-}
-
-declare module 'eslint-plugin-unused-imports' {
-  import { type ESLint } from 'eslint'
-  const plugin: ESLint.Plugin
+declare module "eslint-plugin-react" {
+  import { type Linter, type ESLint } from "eslint"
+  const plugin: ESLint.Plugin & {
+    configs: {
+      flat: {
+        recommended: Linter.Config
+        "jsx-runtime": Linter.Config
+      }
+    }
+  }
   export = plugin
 }
 
-declare module 'eslint-plugin-react-refresh' {
-  import { type ESLint } from 'eslint'
+declare module "eslint-plugin-react-hooks" {
+  import { type Linter, type ESLint } from "eslint"
+  const plugin: ESLint.Plugin & {
+    configs: {
+      recommended: Linter.Config
+    }
+  }
+  export = plugin
+}
+
+declare module "eslint-plugin-react-refresh" {
+  import { type ESLint } from "eslint"
   const plugin: ESLint.Plugin
   export = plugin
 }
