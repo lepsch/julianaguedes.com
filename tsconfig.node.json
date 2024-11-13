@@ -7,7 +7,7 @@
   "include": [
     "eslint-plugins.d.ts",
     "eslint.config.js",
-    "patch_build.cjs",
+    "patch_build.js",
     "vite.config.ts"
   ]
 }

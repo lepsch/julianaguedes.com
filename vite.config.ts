@@ -1,12 +1,13 @@
 import { defineConfig, type Plugin } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import { createHtmlPlugin as html } from 'vite-plugin-html'
+import { reactRouter } from "@react-router/dev/vite"
 import sitemap from 'vite-plugin-sitemap'
 import svgr from 'vite-plugin-svgr'
 
-export default defineConfig({
+export default defineConfig(({ command, isSsrBuild }) => ({
   plugins: [
-    react(),
+    reactRouter({
+      prerender: true,
+    }),
     svgr({
       svgrOptions: {
         // Forward `ref` to the root SVG tag.
@@ -29,7 +30,7 @@ export default defineConfig({
         '/securimage/database',
         '/tarteaucitronjs',
       ],
-      outDir: 'build',
+      outDir: 'build/client',
       robots: [{
         userAgent: '*',
         disallow: [
@@ -44,18 +45,34 @@ export default defineConfig({
         '/sobre': 0.5,
         '/tratamentos': 0.5,
       },
-    }) as Plugin,
-    html({
-      minify: true,
-      inject: {
-        data: {
-          updatedTime: new Date().toISOString(),
-        },
-      },
-    }),
+    }) as Plugin
   ],
-  build: {
-    ssr: false,
-    outDir: 'build',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+    },
   },
-})
+  build: {
+    rollupOptions: {
+      ...(isSsrBuild
+        ? {}
+        : {
+            // Compile a separate entry-point for sourcing it from `<script />`
+            input: ["./app/tarteaucitron-init.ts"],
+            output: {
+              entryFileNames: (chunkInfo) =>
+                chunkInfo.name === "tarteaucitron-init" ? "assets/[name].js" : "assets/[name]-[hash].js",
+            },
+          }),
+    },
+  },
+  define: {
+    // For dev-server set it to the source code itself. Otherwise, set it
+    // to the compiled asset
+    TARTEAUCITRON_INIT_URL: JSON.stringify(
+      command === "build" ? "/assets/tarteaucitron-init.js" : "/app/tarteaucitron-init.ts",
+    ),
+  },
+}))
