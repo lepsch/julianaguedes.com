@@ -1,13 +1,8 @@
-import React from "react"
+import { type ReactNode } from "react"
 
 import "./Address.scss"
 
-export const Address: React.FC<{
-  id: string
-  first?: React.ReactNode
-  second?: React.ReactNode
-}> = ({ id, first, second }) => {
-  /* eslint-disable @stylistic/jsx-one-expression-per-line */
+export const Address = ({ id, first, second }: { id: string; first?: ReactNode; second?: ReactNode }) => {
   return (
     <div className="Address">
       <address aria-labelledby={`${id}-address-senhora-a-branca`}>

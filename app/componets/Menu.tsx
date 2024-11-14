@@ -4,6 +4,7 @@ import clsx from "clsx"
 
 import Bars from "../assets/bars-solid.svg"
 import Xmark from "../assets/xmark-solid.svg"
+import { canonicalPath } from "..//canonical-path"
 import styles from "./Menu.module.scss"
 
 export function Menu() {
@@ -56,22 +57,22 @@ export function Menu() {
       </div>
       <ul id="menu" className={clsx(styles["menu-content"], { open: menuOpen })} role="menu">
         <li className={styles["menu-item"]} role="none">
-          <Link role="menuitem" to="/">
+          <Link role="menuitem" to={canonicalPath.home}>
             Início
           </Link>
         </li>
         <li className={styles["menu-item"]} role="none">
-          <Link role="menuitem" to="/tratamentos">
+          <Link role="menuitem" to={canonicalPath.tratamentos}>
             Tratamentos
           </Link>
         </li>
         <li className={styles["menu-item"]} role="none">
-          <Link role="menuitem" to="/sobre">
+          <Link role="menuitem" to={canonicalPath.sobre}>
             Sobre
           </Link>
         </li>
         <li className={styles["menu-item"]} role="none">
-          <Link role="menuitem" to="/contacto">
+          <Link role="menuitem" to={canonicalPath.contacto}>
             Contacto
           </Link>
         </li>

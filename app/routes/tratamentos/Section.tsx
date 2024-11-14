@@ -5,7 +5,7 @@ import styles from "./Section.module.scss"
 
 export function Section({
   alt,
-  href,
+  to,
   id,
   name,
   photo,
@@ -13,7 +13,7 @@ export function Section({
   text,
 }: {
   alt: string
-  href?: string
+  to?: string
   id: string
   name: string
   photo: string
@@ -32,7 +32,7 @@ export function Section({
             {name}
           </h2>
           <p>{text}</p>
-          {href && <Button href={href}>Saiba Mais</Button>}
+          {to && <Button to={to}>Saiba Mais</Button>}
         </div>
       </div>
       <div className={styles["photo"]}>
