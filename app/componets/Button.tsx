@@ -1,4 +1,5 @@
 import { type ReactNode } from "react"
+import { Link } from "react-router"
 import clsx from "clsx"
 import styles from "./Button.module.scss"
 
@@ -9,17 +10,17 @@ enum ButtonTheme {
 
 export const Button = ({
   children,
-  href,
+  to,
   theme = ButtonTheme.light,
 }: {
   children?: ReactNode | undefined
-  href: string
+  to: string
   theme?: ButtonTheme
 }) => {
   return (
-    <a className={clsx(styles["Button"], theme)} href={href}>
+    <Link className={clsx(styles["Button"], theme)} to={to}>
       {children}
-    </a>
+    </Link>
   )
 }
 

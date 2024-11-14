@@ -16,7 +16,7 @@ function Home() {
       <SelfDisplay />
       <Section
         alt="Colagem de fotos de tratamentos e Dra. Juliana Guedes"
-        href="/tratamentos"
+        to={canonicalPath.tratamentos}
         id="tratamentos"
         name="Tratamentos"
         photo={tratamentos}

@@ -1,5 +1,6 @@
 import { useParallax } from "react-scroll-parallax"
 
+import { canonicalPath } from "../../canonical-path"
 import { Button } from "../../componets/Button"
 import photo from "../../assets/dra-juliana-guedes-photo.jpg"
 import styles from "./SelfDisplay.module.scss"
@@ -16,7 +17,7 @@ export function SelfDisplay() {
           <h2 className={styles["name"]}>Dra. Juliana Guedes</h2>
           <p>Medicina Estética - OM 70651</p>
           <p>Procedimentos - Tecnologias - Beleza - Ciência - Saúde - Estética - Lifestyle</p>
-          <Button href="/sobre">Conheça a Médica</Button>
+          <Button to={canonicalPath.sobre}>Conheça a Médica</Button>
         </div>
       </div>
       <div className={styles["photo"]}>
