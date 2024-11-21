@@ -1,11 +1,11 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
 import type { LinksFunction, MetaFunction } from "react-router"
+import { ParallaxProvider } from "react-scroll-parallax"
 import { BASE_URL, DOMAIN } from "./constants"
 // import type * as Route from "./+types.root"
 
 import "normalize.css"
 import "./styles.scss"
-import { ParallaxProvider } from "react-scroll-parallax"
 
 export const loader = () => {
   return {
@@ -22,7 +22,7 @@ export const links: LinksFunction = () => [{ rel: "icon", href: "/favicon.ico" }
 const title = "Dra. Juliana Guedes"
 const subtitle = "Medicina Estética Avançada - Braga/Matosinhos"
 const description =
-  "Ácido Hialurónico - Toxina Botulínica - Fios de PDO - Bioestimuladores de Colagénio - Dieta Cetogênica (PronoKal® / Proteifine) - Peeling Químico - Microneedling - Consultas Médicas - Mesoterapia"
+  "Ácido Hialurónico - Toxina Botulínica - Fios de PDO - Bioestimuladores de Colagénio - Dieta Cetogênica (PronoKal® / Proteifine®) - Peeling Químico - Microneedling - Consultas Médicas - Mesoterapia"
 const ogImage = `${BASE_URL}/dra-juliana-guedes-social.jpg`
 
 export function Layout({ children }: { children: React.ReactNode }) {
