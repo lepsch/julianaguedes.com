@@ -2,6 +2,7 @@ import clsx from "clsx"
 
 import { Button } from "../../componets"
 import styles from "./Section.module.scss"
+import { useMemo } from "react"
 
 export function Section({
   alt,
@@ -20,6 +21,13 @@ export function Section({
   reverse?: boolean
   text: string
 }) {
+  const paragraphs = useMemo(() => {
+    const lines = text
+      .split(/\s*\n\s*\n\s*/)
+      .map((x) => x.trim())
+      .filter((x) => !!x)
+    return lines.map((line, index) => <p key={index}>{line}</p>)
+  }, [text])
   return (
     <section
       className={clsx(styles["Section"], { [styles["reverse"] as string]: !!reverse })}
@@ -31,7 +39,7 @@ export function Section({
           <h2 id={`${id}-title`} className={styles["name"]}>
             {name}
           </h2>
-          <p>{text}</p>
+          {paragraphs}
           {to && <Button to={to}>Saiba Mais</Button>}
         </div>
       </div>
