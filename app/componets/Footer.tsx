@@ -36,7 +36,7 @@ export function Footer({ hideSocial, hideSchedule }: { hideSocial: boolean; hide
       </div>
       <Address id="footer" />
       <div className={styles["copyright"]}>
-        <p>© 2022-2024 Juliana Guedes</p>
+        <p>© 2022-2025 Juliana Guedes</p>
       </div>
     </footer>
   )
