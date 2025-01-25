@@ -6,9 +6,7 @@ import { BASE_URL } from "./app/constants"
 
 export default defineConfig(({ command, isSsrBuild }) => ({
   plugins: [
-    reactRouter({
-      prerender: true,
-    }),
+    reactRouter(),
     svgr({
       svgrOptions: {
         // Forward `ref` to the root SVG tag.
