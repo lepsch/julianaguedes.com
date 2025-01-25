@@ -24,6 +24,7 @@ const subtitle = "Medicina Estética Avançada - Braga/Matosinhos"
 const description =
   "Ácido Hialurónico - Toxina Botulínica - Fios de PDO - Bioestimuladores de Colagénio - Dieta Cetogênica (PronoKal® / Proteifine®) - Peeling Químico - Microneedling - Consultas Médicas - Mesoterapia"
 const ogImage = `${BASE_URL}/dra-juliana-guedes-social.jpg`
+const themeColor = "#AA5050"
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -31,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#AA5050" />
+        <meta name="theme-color" content={themeColor} />
 
         <title>{`${title} - ${subtitle}`}</title>
         <meta name="description" content={description} />
@@ -41,7 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
         <meta content={title} name="apple-mobile-web-app-title" />
-        <meta content="#AA5050" name="msapplication-TileColor" />
+        <meta content={themeColor} name="msapplication-TileColor" />
         <meta content={ogImage} name="msapplication-TileImage" />
 
         <meta name="twitter:card" content="summary_large_image" />
