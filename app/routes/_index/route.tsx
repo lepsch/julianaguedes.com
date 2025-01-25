@@ -7,6 +7,7 @@ import { Section } from "../tratamentos/Section"
 import { Cover } from "./Cover"
 import { SelfDisplay } from "./SelfDisplay"
 import styles from "./index.module.scss"
+import procedures from "../tratamentos/procedures"
 
 export const links: LinksFunction = () => [{ rel: "canonical", href: `${BASE_URL}${canonicalPath.home}` }]
 
@@ -21,9 +22,7 @@ function Home() {
         name="Tratamentos"
         photo={tratamentos}
         reverse
-        text="Ácido Hialurónico - Toxina Botulínica - Fios de PDO - Bioestimuladores
-        de Colagénio - Dieta Cetogênica (PronoKal® / Proteifine®) - Peeling
-        Químico - Microneedling - Consultas Médicas - Mesoterapia"
+        text={procedures.map(({ name }) => name).join(" - ") + " - entre outros..."}
       />
     </Page>
   )

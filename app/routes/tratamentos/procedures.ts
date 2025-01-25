@@ -43,6 +43,16 @@ const procedures: Array<{
       expressão. Seu efeito dura, em média, 120 dias após aplicação.`,
   },
   {
+    alt: "Foto da Dra. Juliana Guedes com uma seringa de Ácido Hialurónico",
+    id: "acido-hialuronico",
+    name: "Ácido Hialurónico",
+    photo: acidohialuronico,
+    text: `O ácido hialurónico é uma substancia biocompatível em formato de gel. É utilizado amplamente para preencher
+      rugas e sulcos, corrigir pequenas assimetrias e imperfeições e restabelecer o volume perdido no processo de
+      envelhecimento. Além disso tem a capacidade de melhorar o contorno facial e dar volume a estruturas como lábios
+      e glúteos, dentre outras.`,
+  },
+  {
     alt: "Foto da Dra. Juliana Guedes com os Bioestimuladores de Colagénio",
     id: "bioestimuladores-de-colageno",
     name: "Bioestimu\u200Bladores de Colágeno",
@@ -53,16 +63,6 @@ const procedures: Array<{
       flacidez e envelhecimento da pele (linhas, rugas e dobras da pele). Podem ser usados tanto na face quanto no
       corpo (pescoço, colo, braços, abdomem, glúteos e pernas). O protocolo de aplicação e número de sessões variam de
       acordo com o grau de flacidez.`,
-  },
-  {
-    alt: "Foto da Dra. Juliana Guedes com uma seringa de Ácido Hialurónico",
-    id: "acido-hialuronico",
-    name: "Ácido Hialurónico",
-    photo: acidohialuronico,
-    text: `O ácido hialurónico é uma substancia biocompatível em formato de gel. É utilizado amplamente para preencher
-      rugas e sulcos, corrigir pequenas assimetrias e imperfeições e restabelecer o volume perdido no processo de
-      envelhecimento. Além disso tem a capacidade de melhorar o contorno facial e dar volume a estruturas como lábios
-      e glúteos, dentre outras.`,
   },
   {
     alt: "Foto de uma paciente com o procedimento de Fios de PDO aplicados na face pela Dra. Juliana Guedes",
@@ -76,16 +76,16 @@ const procedures: Array<{
       pela flacidez da pele do pescoço.`,
   },
   {
-    alt: "Foto da Dra. Juliana Guedes com ficha do PronoKal®",
+    alt: "Foto da Dra. Juliana Guedes com ficha do PronoKal® / Proteifine® (Ysonut)",
     id: "pronokal",
-    name: "PronoKal®",
+    name: "Dieta Cetogênica",
     photo: pronokal,
-    text: `O Método PronoKal® é um tratamento médico que combina dieta cetogénica, exercício e coaching. A dieta
-      cetogénica, baixa em hidratos de carbono e gordura, com uma ingestão de proteínas adequada que permitirá que se
-      perca gordura e preserve massa muscular. Dessa forma o paciente perde peso desde os primeiros dias e sente-se
-      com energia, sem passar fome. Há programas específicos para grandes perdas ponderais (PNK) para pacientes com
-      algum grau de obesidade e também para perdas até 5Kg (principalmente gordura localizada) para paciente com IMC
-      (Índice de Massa Corporal) normal.`,
+    text: `O método (PronoKal® ou Proteifine®) consiste em um tratamento médico que combina dieta cetogénica,
+      exercício e coaching. A dieta cetogénica, baixa em hidratos de carbono e gordura, com uma ingestão de proteínas
+      adequada que permitirá que se perca gordura e preserve massa muscular. Dessa forma o paciente perde peso desde os
+      primeiros dias e sente-se com energia, sem passar fome. Há programas específicos para grandes perdas ponderais
+      para pacientes com algum grau de obesidade e também para perdas até 5Kg (principalmente gordura localizada)
+      para paciente com IMC (Índice de Massa Corporal) normal.`,
   },
   {
     alt: "Foto de uma paciente com o procedimento de Peeling Químico",
